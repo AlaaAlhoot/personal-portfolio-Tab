@@ -1,0 +1,418 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+/* global variables */
+:root{
+    --main-color : #cb3931;
+    --sec-color : #f0f0f0;
+
+    --main-font: 'Poppins', sans-serif;
+
+    --speace-100 : 100px;
+}
+/* --- End global variables --- */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: var(--main-font);
+}
+
+body{
+
+    background: linear-gradient(
+        to bottom,
+        var(--sec-color) 0%,
+        var(--sec-color) 62%,                                                                 
+        var(--main-color) 62%,
+        var(--main-color) 100%
+    );
+   
+}
+
+.main-container{
+    max-width: 1100px;
+    /* border: 1px solid #000; */
+    margin: 150px auto;
+    background-color: white;
+    box-shadow: 0 0 5px #aaa;
+}
+
+.container{
+    padding-left: var(--speace-100);
+    padding-right: calc(var(--speace-100) * 1.5);
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: var(--speace-100);
+    position: relative;
+}
+
+.intro{
+    color: var(--main-color);
+    font-size: 1em;
+    margin-top: var(--speace-100);
+    max-width: 250px;
+    margin-bottom: 85px;
+}
+
+.profile-img{
+    position: absolute;
+    top: 0;
+    right: calc(var(--speace-100) * 1.5);
+    width: 500px;
+    height: 540px;
+    
+    z-index: 999;
+    display: flex;
+    justify-content: end;
+    transition: 0.5s ease;
+}
+
+/* --- start style section info --- */
+.info{
+    padding-left: 65px;
+    background-color: var(--sec-color);
+    position: relative;
+    padding-top: calc(var(--speace-100) * 2);
+    padding-bottom: var(--speace-100);
+    margin-left: var(--speace-100);
+    margin-bottom: var(--speace-100);
+}
+
+.info h1{
+    font-size: 5em;
+    font-weight: bold;
+    font-weight: 600;
+}
+
+.job-description{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 2em;
+    align-items: center;
+}
+
+.job-description p{
+    color: var(--main-color);
+    
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+
+.s-links{
+    margin-right: var(--speace-100);
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    justify-content: space-between;
+    
+}
+
+.s-links a{
+    color: #000;
+    font-size: 0.75em;
+}
+
+.call-info{
+    position: absolute;
+    color: var(--main-color);
+    font-size: 1.25em;
+    line-height: 1.75em;
+    top: calc(var(--speace-100) * 2.2);
+    right: calc(var(--speace-100) * 2);
+}
+
+/* --- End style section info --- */
+/* ------------------------------ */
+
+
+/* --- start style section Main --- */
+
+.main-section .container{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    gap: var(--speace-100);
+}
+
+.main-section .title{
+    color: var(--main-color);
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    font-weight: 600;
+}
+
+.block{
+    margin-bottom: 50px;
+}
+
+.block-date{
+    font-style: italic;
+    margin-bottom: 10px;
+}
+
+.block-title{
+    color: var(--main-color);
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.block-title > span{
+    color: black;
+}
+
+.block-text{
+    color: gray;
+}
+
+.experience{
+    flex-grow: 2;
+}
+
+.experienc .block-title{
+    text-transform: capitalize;
+}
+
+.education{
+    flex-grow: 1;
+}
+
+.education .block{
+    font-size: 0.85em;
+}
+
+.education .block-title{
+    text-transform: uppercase;
+}
+
+/* --- End style section Main --- */
+/* ------------------------------ */
+
+
+/* --- start style footer --- */
+
+footer{
+    text-align: center;
+    color: var(--main-color);
+    line-height: 50px;
+}
+
+footer .container{
+    background-color: var(--sec-color);
+}
+/* --- End style Footer --- */
+/* ------------------------------ */
+
+
+/* ------------------------------ */
+/* --- Start Styleing for other secreens--- */
+
+/* Extra small devices */
+@media (max-width: 600px) {
+    :root{
+        --speace-100 : 50px;
+    }
+
+    .main-container {
+        margin: var(--speace-100) auto;
+    }
+    header .container {
+        flex-direction: column;
+        gap: 0;
+        position: relative;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .intro {
+        position: absolute;
+        max-width: 200px;
+        margin-bottom: 0;
+        color: var(--sec-color);
+        z-index: 99999;
+        left: 35px;
+        font-size: 0.8em;
+    }
+
+    .profile-img {
+        position: relative;
+
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .info {
+        padding-left: 0;
+        padding-top: var(--speace-100);
+        padding-bottom: var(--speace-100);
+        margin-left: auto;
+        margin-bottom: var(--speace-100);
+    }
+
+    .info h1{
+        text-align: center;
+    }
+
+    .job-description {
+        flex-direction: column;
+    }
+    .job-description p{
+        text-align: center;
+    }
+
+    .call-info {
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .main-section .container {
+        flex-direction: column;
+    }
+}
+
+/* Small devices */
+@media (min-width: 600px) and (max-width: 768px) {
+    :root{
+        --speace-100 : 60px;
+    }
+
+    .main-container {
+        margin: var(--speace-100) auto;
+    }
+    header .container {
+        flex-direction: column;
+        gap: 0;
+        position: relative;
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .intro {
+        position: absolute;
+        max-width: 200px;
+        margin-bottom: 0;
+        color: var(--sec-color);
+        z-index: 99999;
+        left: 35px;
+        font-size: 0.8em;
+    }
+
+    .profile-img {
+        position: relative;
+
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .info {
+        padding-left: 0;
+        padding-top: var(--speace-100);
+        padding-bottom: var(--speace-100);
+        margin-left: auto;
+        margin-bottom: var(--speace-100);
+    }
+
+    .info h1{
+        text-align: center;
+    }
+
+    .job-description {
+        flex-direction: column;
+    }
+    .job-description p{
+        text-align: center;
+    }
+
+    .call-info {
+        position: static;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .main-section .container {
+        flex-direction: column;
+    }
+}
+
+/* Medium devices */
+@media (min-width: 768px) and (max-width: 992px) {
+    :root{
+        --speace-100 : 70px;
+    }
+
+    .main-container {
+        margin: calc(var(--speace-100) * 1.5) auto;
+    }
+    header .container {
+        flex-direction: column;
+        gap: 0;
+        position: relative;
+
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .intro {
+        position: absolute;
+        max-width: 300px;
+        margin-bottom: 0;
+        color: var(--sec-color);
+        z-index: 99999;
+        left: 50px;
+    }
+
+    .profile-img {
+        position: relative;
+
+        top: auto;
+        right: auto;
+        width: 100%;
+        height: auto;
+    }
+
+    .info {
+        padding-left: 50px;
+        padding-top: var(--speace-100);
+        padding-bottom: var(--speace-100);
+        margin-left: auto;
+        margin-bottom: var(--speace-100);
+    }
+
+    .call-info {
+        top: calc(var(--speace-100) * 1.2);
+        right: calc(var(--speace-100) * 1.5);
+    }
+}
+
+/* Large devices*/
+@media (min-width: 992px) and (max-width: 1199px) {
+    :root{
+        --speace-100 : 80px;
+    }
+
+    .profile-img{
+        width: 450px;
+        height: 490px;
+    }
+}
+
+/* larg screen  */
+@media (min-width: 1200px){
+    :root{
+        --speace-100 : 100px;
+    }
+}
